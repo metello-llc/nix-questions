@@ -53,3 +53,7 @@ The `haskell4nix` docs use `nix-env` heavily, and this command keeps being a con
 
 **Interviewer**: Would you consider starting over on Ubuntu/Arch?
 **Participant**: I could do it, but was migrating machines anyway, and I prefer to use and stay with a single OS.
+
++ Fairly proficient with the shell, but still not sure what `nix-shell` does exactly, other than creating a special environment.
+
++ Remarks that it’s really hard to find an introduction for declaring a C/C++ development environment.
