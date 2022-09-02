@@ -57,3 +57,40 @@ The `haskell4nix` docs use `nix-env` heavily, and this command keeps being a con
 + Fairly proficient with the shell, but still not sure what `nix-shell` does exactly, other than creating a special environment.
 
 + Remarks that it’s really hard to find an introduction for declaring a C/C++ development environment.
+
++ edit this:
+
+  Biggest issues with documentation is that even hot topics are covered sloppily, and hard to discover where one should look for information. Cases in point:
+
+  1. **Use flakes or not?**
+      
+    It's a significant change of how to do things and the concensus seems to be that this is the way forward, but there is a lot of noise surrounding this. Posts on Tweag blog are very basic, mostly focused on pinning, but not clear how it relates to system configurations.
+      
+  2. [**Home Manager**][home-manager]
+      
+    The prevalent advice for most NixOS user configuration question, but it is not straightforward to use, especially when never having worked with dotfiles in an organized manner before.
+      
+  3. **What is Nix?**
+
+    Found [Wil T's videos](https://www.youtube.com/watch?v=QKoQ1gKJY5A) that clarified it.
+
+  4. **Hard to judge what are examples of [essential and accidental complexity](https://simplicable.com/new/accidental-complexity-vs-essential-complexity) in the Nix ecosystem.**
+
++ another edit needed:
+
+  Kick-off problem: [`syncthing`](https://syncthing.net/) does not start automatically. Simply  running `syncthing` works, but not as a service.
+
+  Looks up [Syncthing page](https://nixos.wiki/wiki/Syncthing) in the [nixos.wiki](https://nixos.wiki/), but wants to start it as a user service, and the example only shows it for NixOS.
+
++ 
++ How to debug an issue, especially if it does not work as documented?
+
+  > **Participant**: Tried to iron out configuration issues with `nix repl`, but got stuck fast. It would be great if one could debug on one’s own or if there would be a general troubleshooting guide, because my Nix knowledge is not enough to approach this.
+
++ Some of the found examples use overlays, and it is hard to figure out the rationale behind why they are usually organized the way they are (e.g., split apart from the `default.nix` in many cases).
+
++ Old configurations use many modules; never had a need for custom modules, and not sure what they are for.
+
++ Some configuration examples were from people using one repository for multiple systems. How?
+
++ The [nixos.wiki](https://nixos.wiki/)'s [Configuration Collection](https://nixos.wiki/wiki/Configuration_Collection) is great, but it would be so much better if there would a description accompanying each configuration about how the authors arrived at their solutions.
